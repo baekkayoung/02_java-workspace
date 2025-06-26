@@ -58,6 +58,8 @@ public class B_KeyboardInput {
 		int age = sc.nextInt();
 		
 		// 여기서 이상함.. 버퍼에 남아있는 엔터 제거!
+		// int는 숫자만 읽고 엔터가 남아있어서 주소가 입력창도 안 뜨고 그냥 넘어감. 
+		//그래서 비워주는 과정을 거쳐야 함
 		sc.nextLine();
 		
 		System.out.print("주소 : ");
