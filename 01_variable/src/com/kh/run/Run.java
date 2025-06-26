@@ -3,6 +3,7 @@ package com.kh.run;
 import com.kh.variable.A_Variable;
 import com.kh.variable.B_KeyboardInput;
 import com.kh.variable.C_Printf;
+import com.kh.variable.D_Casting;
 
 public class Run {
 
@@ -21,7 +22,10 @@ public class Run {
 		//b.charAtTest();
 		
 		C_Printf c = new C_Printf();
-		c.printTest();
+		//c.printTest();
+		
+		D_Casting d = new D_Casting();
+		d.autoCasting();
 		
 	}
 }

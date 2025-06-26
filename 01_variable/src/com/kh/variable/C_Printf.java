@@ -32,6 +32,28 @@ public class C_Printf {
 	
 	//System.out.printf("%d %d", iNum1); // 에러
 	System.out.printf("%d %d", iNum1, iNum2, 30); // 30은 그냥 무시됨
+	System.out.println();
+	
+	double dNum1 = 1.23456789;
+	double dNum2 = 4.53;
+	
+	//System.out.printf("%f %f", dNum1, dNum2); // 무조건 소숫점 6자리까지
+	System.out.printf("%.2f %.2f\n", dNum1, dNum2); // 정상. 개행: \n
+	
+	char ch = 'a'; //문자는 홑따옴표
+	String str = "Hello";
+	
+	System.out.printf("%c %s %s\n", ch, str, ch);
+	System.out.printf("%C %S %S\n", ch, str, ch);
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

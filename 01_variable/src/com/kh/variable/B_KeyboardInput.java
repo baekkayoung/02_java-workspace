@@ -61,14 +61,14 @@ public class B_KeyboardInput {
 		sc.nextLine();
 		
 		System.out.print("주소 : ");
-		String adress = sc.nextLine();
+		String address = sc.nextLine();
 		
 		System.out.print("키 : ");
 		double height = sc.nextDouble();
 		
 		// xxx님은 xx살이며, 사는 곳은 xxx이고, 키는 xxx.xcm 입니다.
-		System.out.print(name + "님은" + age + "살이며, 사는 곳은" + adress +"이며, 키는" + height + "cm 입니다." );
-		
+//		System.out.print(name + "님은" + age + "살이며, 사는 곳은" + address +"이며, 키는" + height + "cm 입니다." );
+		System.out.printf("%s님은 %d살이며, 사는 곳은 %s이고, 키는 %.1fcm 입니다 ", name, age, address, height);
 	}
 	
 	public void inputTest4(){
