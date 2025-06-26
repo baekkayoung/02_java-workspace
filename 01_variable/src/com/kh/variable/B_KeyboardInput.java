@@ -76,7 +76,7 @@ public class B_KeyboardInput {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-		System.out.print("설명(M/F) : ");
+		System.out.print("성별(M/F) : ");
 		char gender = sc.nextLine().charAt(0);
 		// 문자열.charAt(인덱스) : 해당 문자열로부터 해당 인덱스의 문자를 추출해주는 메소드
 		// * 인덱스 : 순번 같은 존재. 단, 0부터 시작!
