@@ -25,7 +25,12 @@ public class Run {
 		//c.printTest();
 		
 		D_Casting d = new D_Casting();
-		d.autoCasting();
+		//d.autoCasting();
+		//d.forceCasting();
+		//d.calScore();
+		
+		
+		
 		
 	}
 }

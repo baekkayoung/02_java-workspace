@@ -1,5 +1,7 @@
 package com.kh.variable;
 
+import java.util.Scanner;
+
 public class D_Casting {
 
 	/*
@@ -83,14 +85,53 @@ public class D_Casting {
 		// 6. byte간의 연산
 		byte b1 = 1;
 		byte b2 = 10;
-		
 		//byte b3 = b1 + b2; // byte는 연산 결과가 무조건 int형으로 저장됨
 		
+		}
+	public void forceCasting(){
+		// 강제형변환 : 큰 크기의 자료형을 작은 크기의 자료형으로 바꾸는 것
+		
+		// double(8byte) = > float(4byte)
+		double d1 =4.0;
+		float f1 = (float)d1;
+		// 강제형변환 안 해주면 오류남
+		
+		// double(8byte) =>int(4byte)
+		int iNum = 10;
+		double dNum = 5.89;
+		
+		// int iSum = iNum +dNum; 안됨
+		
+		// 방법 1. 연산 결과를 int 형으로 강제 형변환 // 은우 얼굴 살리려면 몸은 날아감
+		int iSum1 = (int)(iNum +dNum);
+		System.out.println("iSum1 : " + iSum1);
+		
+		// 방법 2. double형 값만을 int형으로 강제 형변환
+		int iSum2 = iNum + (int)dNum;
+		System.out.println("iSum2 : " + iSum2);
+		
+		}
+		public void calScore() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("국어 : ");
+			double kor = sc.nextDouble();
+			
+			System.out.print("영어 : ");
+			double eng = sc.nextDouble();
+			
+			System.out.print("수학 : ");
+			double math = sc.nextDouble();
+			
+			System.out.println("총점 : " + (int)(kor + eng + math)); //소수점으로 나오니까 int 붙여서 강제 형변환
+			System.out.println("평균 : " + (int)((kor + eng + math)/3)); //
+			
+					
 		
 		
-		
-		
-		
+	
+	
 	}
 	
 	
