@@ -91,13 +91,13 @@ public class A_For {
 			
 			/*
 			 * int sum = 0; 
-			 * sum += 1 => sum = + 1 => 0 +1
+			 * sum += 1 => sum = + 1 => 0 + 1
 			 * sum += 2 => sum = + 2 = > 0 + 1 + 2
 			 * sum += 3 => sum = + 3 => 0 + 1 + 2 + 3
 			 * .
 			 * .
 			 * .
-			 * sum += 10 = > sum = + 3 => 0 + 1 + 2 + .... + 10
+			 * sum += 10 = > sum = + 10 => 0 + 1 + 2 + .... + 10
 			 * 
 			 * 규칙을 찾아!
 			 * sum 변수에 누적해서 합산하는 거 반복적으로 진행됨
@@ -142,28 +142,30 @@ public class A_For {
 			 * 
 			 */
 			
-			// int random = Math.random() double 형이라서 안됨
+			// int random = Math.random() 매스랜덤이 double 형이라서 안됨
+			//               0.0 ~ 1.0    0.0 ~ 0.99999
 			
-			//               0.0~ 1.0          0.0 ~ 0.99999
-			//int random = Math.random() * 10;
-			//				0.0~10.0         0.0 ~ 9,9999
-			//int random = Math.random() * 10+1;
-			//				1.0~11.0		1.0~10.099999999
+			// int random = Math.random() * 10;
+			//				0.0 ~ 10.0    0.0 ~ 9,9999
+			
+			// int random = Math.random() * 10+1;
+			//				1.0 ~ 11.0	  1.0 ~ 10.099999999
+			
+			
 			int random = (int)(Math.random() * 10+ 1);
-			//				 1<=         <11     1~10
+			
+			//				 1<= random <11  : 1~10
 			System.out.println("1~10사이의 랜덤값 : " + random);
 			
 			int sum = 0 ;
-			for(int i=1; i<=random; i++) {
-				sum += i;
+			for(int i=1; i<=random; i++) { 
+				sum += i; // 누적합 공식
 			}
 			
 			System.out.println("1부터" + random + "까지의 합계: " + sum);
 		}
 		
 		public void method9() {
-			String str = "Hello";
-			
 			//각 인덱스별 문자를 뽑아서 출력
 			/*
 			 * H  => str.charAt(0)
@@ -173,6 +175,8 @@ public class A_For {
 			 * o  => str.charAt(4)
 			 */
 			
+			String str = "Hello";
+			
 			for(int i=0; i<5; i++) {
 				System.out.println(str.charAt(i));
 			}
@@ -180,10 +184,6 @@ public class A_For {
 		}
 		
 		public void method10(){
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.print("문자열 입력 : ");
-			String str = sc.nextLine();
 		
 			
 			// apple의 길이 : 5글자
@@ -191,6 +191,11 @@ public class A_For {
 			
 			// kiwi의 길이 : 4글자
 			// 0123
+			
+		  Scanner sc = new Scanner(System.in);
+				
+		  System.out.print("문자열 입력 : ");
+		  String str = sc.nextLine();
 			
 		  System.out.println("문자열의 길이: " + str.length());
 		  
@@ -211,6 +216,8 @@ public class A_For {
 			 *  2 x 8 = 16
 			 *  2 x 9 = 18
 			 */
+			
+			
 			for (int i = 1; i<10 ; i++ ) {
 				System.out.printf("%d x %d = %d\n", 2, i, 2 * i); // 인자 준 만큼 
 			}
@@ -226,13 +233,15 @@ public class A_For {
 						System.out.printf("%d x %d = %d\n", dan, i , dan*1);
 					}
 		}
+		
+		
 		// 중첩 for 문
 		public void method13() {
 			// 1 2 3 4 5
 			// 1 2 3 4 5
 			// 1 2 3 4 5
 
-			for(int j=1; j<=3; j++) { // n번 반복하고 싶으면 그 안에 그냥 넣으면 됨 전체 사이클
+			for(int j=1; j<=3; j++) { // n번 반복하고 싶으면 그 안에 그냥 넣으면 됨. 전체 사이클
 				
 				for(int i = 1 ; i<=5 ; i++) {
 					
