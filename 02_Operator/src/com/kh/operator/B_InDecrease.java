@@ -34,18 +34,44 @@ public class B_InDecrease {
 		System.out.println("2회 수행 :" + num2++); // 12 출력 후 => num2가 13로 증가 (보이는 건 11이지만)
 		System.out.println("최종 num2의 값: " + num2); // 13
 		
+		}
+	
+	
+		public void method2(){
+			int a = 10;
+			int b = ++a; // a = 11 b = 11
+			System.out.printf("a: %d, b: %d\n", a, b );
+			
+			
+			int c = 10;
+			int d = c++; // c=11, d=10
+			System.out.printf("c : %d, d: %d\n" , c , d);
+			
+			
+			System.out.println("===============");
+			int num = 20;
+			System.out.println("현재 num : " + num);
+			System.out.println("++num은? : " + ++num); //21
+			System.out.println("nim++은? : " + num++); //21(줄 넘어가고 나서는 22)
+			System.out.println("--num은? : " + --num); //21
+			System.out.println("num--은? : " + num--); //21(줄 넘어가고 나서는 20)
+			System.out.println("최종 num : " + num); //20
+			
+			}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			public void method3() {
+				int num1 = 20;
+				int result1 = ++num1 * 3; //num1 = 21, result1 = 63
+				System.out.printf("num1 : %d, result1 : %d\n" , num1, result1 );
+				
+				int num2 = 20;
+				int result2 = num2++ * 3; //num2 = 20, result2 = 60
+				System.out.printf("num2 : %d, result2 : %d\n" , num2 , result2);
+				
+				
+				
+				
+			
 	}
 
 }
