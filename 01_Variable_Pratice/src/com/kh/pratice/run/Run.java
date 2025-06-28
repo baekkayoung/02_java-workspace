@@ -19,7 +19,7 @@ public class Run {
 		//c.inputTest3();
 		
 		VariablePratice4 d = new VariablePratice4();
-		d.inputTest4();
+		//d.inputTest4();
 		
 	
 
