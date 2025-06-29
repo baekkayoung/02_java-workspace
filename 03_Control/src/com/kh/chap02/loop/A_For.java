@@ -223,6 +223,9 @@ public class A_For {
 			}
 		}
 		
+		
+		
+		
 		public void method12() {
 			// 2~9 까지의 랜덤수 발생시켜서 랜덤단 출력
 			

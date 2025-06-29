@@ -49,12 +49,13 @@ public class B_Switch {
 			System.out.println("과일 입력(사과, 바나나, 복숭아) : ");
 			String fruit = sc.nextLine();
 			int price = 0; // 초기화
-			
+	
 			switch(fruit) {
 			case "사과" : price = 1000; break;
 			case "바나나" : price = 2000; break;
 			case "복숭아" : price = 3000; break;
 			default : System.out.println("해당 과일은 품절입니다.");
+			return;
 			
 			}
 			
@@ -72,7 +73,7 @@ public class B_Switch {
 			System.out.println("등급(정수) : " );
 			int level = sc.nextInt();
 			
-			switch(level) {
+			switch(level) { // 1부터 쭉, 2부터 쭉
 			case 1 : System.out.println("관리 권한");
 			case 2 : System.out.println("글쓰기 권한");
 			case 3 : System.out.println("읽기 권한");
@@ -86,9 +87,9 @@ public class B_Switch {
 			System.out.println("1월~12월까지 중 하나를 입력(정수로)");
 			int month = sc.nextInt();
 			
-			//1 3 5 7 8 10 12 => 31일
-			//4 6 9 11 => 30일
-			//2 =>28일 혹은 29일
+			// 1 3 5 7 8 10 12 => 31일
+			// 4 6 9 11 => 30일
+			// 2 =>28일 혹은 29일
 			
 			switch(month) {
 			case 1 :

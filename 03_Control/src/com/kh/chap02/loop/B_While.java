@@ -69,13 +69,6 @@ public class B_While {
 			System.out.print("문자열 입력 : ");
 			String str = sc.nextLine();
 		
-			
-			// apple의 길이 : 5글자
-			// 01234
-			
-			// kiwi의 길이 : 4글자
-			// 0123
-			
 		  System.out.println("문자열의 길이: " + str.length());
 		  
 		  for(int i=0; i<str.length(); i++) {

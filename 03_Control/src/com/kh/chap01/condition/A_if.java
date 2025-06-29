@@ -181,7 +181,7 @@ public class A_if {
 			
 			if(num > 0) { // 양수일 경우
 				
-				if( num % 2 == 0) { // 양수이고 짝수일 경우
+				if(num % 2 == 0) { // 양수이고 짝수일 경우
 					System.out.println("짝수입니다.");
 				}else { // 양수는 맞고 홀수일 경우
 					System.out.println("홀수입니다.");

@@ -86,7 +86,7 @@ public class E_Logical {
 		System.out.println("num의 값: " + num);
 		
 		int num2 = 10;
-		boolean result2 = true || (++num2 > 0); // ++num2를 읽지 않아서 계속 11 = dead code(절대 실행될 일 없는 코드)
+		boolean result2 = true || (++num2 > 0); // ++num2를 읽지 않아서 계속 10 = dead code(절대 실행될 일 없는 코드)
 		System.out.println("result2 : " + result2);
 		System.out.println("num2의 값 : " + num2);
 	}

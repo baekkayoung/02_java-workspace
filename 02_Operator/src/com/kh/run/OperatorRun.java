@@ -39,7 +39,7 @@ public class OperatorRun {
 	//g.method1();
 	//g.method2();
 	//g.method3();
-	g.method4();
+	//g.method4();
 	
 		}
 	}

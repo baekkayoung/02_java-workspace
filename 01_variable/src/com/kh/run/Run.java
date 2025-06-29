@@ -18,7 +18,7 @@ public class Run {
 		//b.inputTest1();
 		//b.inputTest2();
 		//b.inputTest3();
-		//b.inputTest4();
+		//.inputTest4();
 		//b.charAtTest();
 		
 		C_Printf c = new C_Printf();

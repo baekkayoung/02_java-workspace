@@ -3,6 +3,7 @@ package com.kh.operator;
 import java.util.Scanner;
 
 public class G_Triple {
+	
 	/*
 	 * 삼항연산자 (항이 3개)
 	 * 
@@ -22,7 +23,6 @@ public class G_Triple {
 		
 		//String result = 조건 ? 참일때 : 거짓일때돌려줄까
 		String result = (num > 0 ) ? "양수입니다." : "양수가 아닙니다."; // 0보다 num이 크면 양수입니다, 아니면 양수가 아닙니다
-		
 		System.out.print(num + "은 " + result);
 	}
 	
