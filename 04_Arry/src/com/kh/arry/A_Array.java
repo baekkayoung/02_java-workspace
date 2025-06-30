@@ -1,6 +1,10 @@
 package com.kh.arry;
 
+import java.util.Scanner;
+
 public class A_Array {
+	
+	Scanner sc = new Scanner(System.in);
 
 	
 	// 변수 : 하나의 공간에 하나의 값만 담을 수 있음
@@ -115,13 +119,106 @@ public class A_Array {
 	
 	
 	public void method6() {
+			int[] arr = new int [5];
+			
+			for(int i=0; i<arr.length; i++) {
+				arr[i] = i; // 0 1 2 3 4 
+			} 
+			// 배열의 범위 벗어나서 추가해보기
+			// arr[5] = 5; =>ArrayIndexOutOfBoundsException:배열에 부적절한 인덱스 제시시 에러
+			
+			// *배열의 가장 큰 단점
+			// - 한 번 지정된 배열의 크기는 변경이 불가 (자스와 다름)
+			
+			arr = new int[7]; //다시 만들기
+			
+			/*
+			 * 연결이 끊어진 기존 배열은 Heap 영역에 둥둥 떠다님..(어디에도 참조되어있지 않으므로 필요없는 존재 == 지워주는게 좋다)
+			 * 일정 시간이 지나면 가비지 컬렉터(GC)가 지워줌
+			 * => 자바에서의 "자동 메모리 관리"
+			 */
+			
+			// 배열을 강제로 삭제시키고자 한다면?
+			arr = null; //아무것도 바라보고 있지 않겠다. 참조하지 않겠다. GC가 지워줌
+			System.out.println(arr);
+			
+	}
+	
+	public void method7() {
+		//배열 선언, 할당, 초기화 다 동시에 하기
 		
+		//표현법 1
+		int[] arr1 = new int[] {1,2,3,4};
+		
+		//표현법 2 (자주 씀)
+		int[] arr2 = {1,2,3,4};
+		
+		System.out.println(arr1 == arr2); 
+		//각각 변수의 주소값을 비교하는 것이기 때문에 false가 뜸
 	}
 	
 	
+	public void method8() {
+		// 1. 크기 10짜리인 정수배열
+		int[] arr = new int[10];
+		
+		// 2. 반복문 활용해서 값을 대입 1~100 사이에 발생되는 랜덤값을 넣어주기
+		
+		for(int i=0;i<arr.length;i++) {
+			arr[i] = (int)(Math.random() *100 +1);
+		}
+		
+		// 3. 반복문 활용해서 출력
+		// arr[x] : xx
+		for(int i=0; i<arr.length; i++) {
+			System.out.println("arr[" + i + "] : " + arr[i]);
+		}
+	}
 	
-	
-	
-	
-	
+	public void method9() {
+		
+		System.out.print("배열의 길이 : ");
+		int size = sc.nextInt();
+		
+		sc.nextLine();
+		
+		String[] arr = new String[size];
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print("좋아하는 과일 입력 : ");
+			arr[i] = sc.nextLine(); // ?
+		}
+		
+		//arr[1]: 바나나
+		for(int i=0; i<arr.length;i++){
+			System.out.println("arr["+ i + "]" + arr[i]);
+		}
+	}
+
+	public void method10() {
+
+		// 1. 사용자에게 문자열 입력 받기
+		System.out.println("문자열 입력 : ");
+		String str = sc.nextLine();
+
+		// 2. 쪼개서 캐릭터 배열에 넣기
+		char[] arr = new char[str.length()];
+
+		// 3. 반복문을 활용해서 값대입
+
+		/*
+		 * arr[0] = str.charAt(0); 
+		 * arr[1] = str.chatAt(1); ...
+		 */
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = str.charAt(i);
+		}
+		
+		//4.출력
+		//arr[i] : k
+		for (int i=0; i<arr.length; i++) {
+			System.out.println("arr["+ i + "]:" + arr[i]);
+
+	}
+	}
 }
