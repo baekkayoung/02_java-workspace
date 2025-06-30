@@ -85,7 +85,7 @@ public class A_Array {
 			 * dArr[i]로 특정 인덱스를 출력해도 0.0이 뜨는 것임
 			 */
 		
-			
+
 		}
 		// 내가 각 인덱스에 초기화(값을 주는)하지 않아도 값들이 담겨있음! 왜?
 		// Heap이라는 공간에는 절대 빈 공간이 존재할 수 없음!
@@ -94,11 +94,10 @@ public class A_Array {
 	}
 	
 	public void method4() {
-		int[] arr = new int[10];
+		int[] arr = new int[10]; 
 		for(int i = 0; i<10; i++) { // 10대신 arr.length 넣으면 더 안전
 			arr[i] = i+1;
 		}
-		
 		for(int i=0; i<10;i++) { // 10대신 arr.length 넣으면 더 안전
 			System.out.println(arr[i]);
 		}
@@ -165,7 +164,7 @@ public class A_Array {
 	
 	public void method8() {
 		// 1. 크기 10짜리인 정수배열
-		int[] arr = new int[10];
+		int[] arr = new int[10]; 
 		
 		// 2. 반복문 활용해서 값을 대입 1~100 사이에 발생되는 랜덤값을 넣어주기
 		
@@ -178,38 +177,46 @@ public class A_Array {
 		for(int i=0; i<arr.length; i++) {
 			System.out.println("arr[" + i + "] : " + arr[i]);
 		}
-	}
-	
+	} 
+		/*크기가 10 짜리인 int형 배열 arr가 있다. 
+		 * 첫번째 for : 0부터 arr의 배열의 크기인 10보다 작은 9가 될 때까지 arr의 인덱스 0부터 9까지 랜덤값을 저장시킨다.
+		 * 두번째 for : 0부터 arr의 배열 크기인 10보다 작은 9가 될 때까지 인덱스별 랜덤값을 생성한다.
+		 * arr[i]에는 랜덤값이 저장되어 있으므로 <arr[i]:랜덤값>이 9세트가 생성된다.
+		 */
 	public void method9() {
 		
-		System.out.print("배열의 길이 : ");
-		int size = sc.nextInt();
+		System.out.print("배열의 길이 : "); 
+		int size = sc.nextInt(); // 사용자가 입력한 배열의 길이를 size라는 변수에 저장한다.
 		
 		sc.nextLine();
 		
-		String[] arr = new String[size];
+		String[] arr = new String[size]; // 배열 arr을 size 크기만큼 생성한다.
 		
-		for(int i=0; i<arr.length; i++) {
+		for(int i=0; i<arr.length; i++) { 
 			System.out.print("좋아하는 과일 입력 : ");
 			arr[i] = sc.nextLine(); // 배열의 n번째
+			//0부터 size-1(arr.length)까지 반복하며,
+			// 사용자가 좋아하는 과일을 size-1 개수만큼 입력받아 배열 arr의 각 인덱스에 저장한다.
 		}
 		
 		//arr[1]: 바나나
 		for(int i=0; i<arr.length;i++){
-			System.out.println("arr["+ i + "]" + arr[i]);
-		}
+			System.out.println("arr["+ i + "] : " + arr[i]);
+		}	//배열의 크기만큼 반복하며, 
+			//그 내용이 arr[i] : 사용자가 입력한 과일명 <이 size-1만큼 써진다.
 	}
 
 	public void method10() {
 
 		// 1. 사용자에게 문자열 입력 받기
 		System.out.println("문자열 입력 : ");
-		String str = sc.nextLine();
+		String str = sc.nextLine(); //사용자에게 입력 받은 문자열을 str에 저장한다.
 
 		// 2. 쪼개서 캐릭터 배열에 넣기
-		char[] arr = new char[str.length()];
+		char[] arr = new char[str.length()]; 
+		//입력된 문자열 크기만큼 char 배열 생성. 캐릭터형 배열 arr의 크기를 문자열의 크기와 같이 할당한다.
 		
-		System.out.println("찾고자 하는 문자 : ");
+		System.out.println("찾고자 하는 문자 : "); // 찾고자하는 문자를 입력 받아서 ch에 저장한다.
 		char ch = sc.nextLine().charAt(0);
 
 		// 3. 반복문을 활용해서 값대입
@@ -218,22 +225,23 @@ public class A_Array {
 		 * arr[0] = str.charAt(0); 
 		 * arr[1] = str.chatAt(1); ...
 		 */
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = str.charAt(i);
+		for (int i = 0; i < arr.length; i++) { 
+			arr[i] = str.charAt(i); // 문자열의 각 문자들을 arr 배열에 순서대로 저장
 		}
 		
 		//4.출력
 		//arr[i] : k
 		
-		int count = 0;
+		int count = 0; // 몇 번 등장했는지 누적 저장할 공간 만드는 것
 		
 		
 		for (int i=0; i<arr.length; i++) {
-			System.out.println("arr["+ i + "]:" + arr[i]);
+			System.out.println("arr["+ i + "]:" + arr[i]); //문자열의 인덱스 번호에 부여된 문자를 출력한다.
 			
-			if(arr[i] == ch ) {
+			if(arr[i] == ch ) { //찾고자하는 문자와 같은 문자가 몇개인지 세어서 count에 저장
 				count++;
 			}
+		
 
 	}
 		System.out.println("찾은 문자 개수 : " + count);
@@ -264,7 +272,13 @@ public class A_Array {
 		}
 		
 		System.out.println("해당 배열의 짝수의 합 : " + sum);
-	}
+	} /*
+	 * 사용자에게 배열의 길이를 입력받아서 size에 저장한다. 
+	 * int형 arr 배열의 크기를 size의 크기만큼 생성한다.
+	 * 
+	 * i가 0부터 arr.lenght(size)값 까지 늘어날때까지 int형 랜덤값을 arr배열의 인덱스에 순서대로 저장한다.
+	 * 만약 arr[i]의 값이 짝수면 짝수들의 총합을 출력한다
+	 */
 	
 	
 	

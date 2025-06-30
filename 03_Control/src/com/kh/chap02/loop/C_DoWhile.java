@@ -37,18 +37,17 @@ public class C_DoWhile {
 	public void method3() {
 		// 1부터 사용자가 입력한 수까지 총합 (=누적합)
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); 
 		
-		System.out.println("숫자 : ");
-		int num = sc.nextInt();
+		System.out.println("숫자 : "); 
+		int num = sc.nextInt(); // 입력받은 숫자를 num에 저장한다.
 		
-		int sum = 0;
+		int sum = 0; 
 		int i = 1;
 		do {
 			sum += i; // 누적합
-			i++; // 이거 없으면 1만 계속 더해짐
-		}while(i<=num);
-		
+			i++; // 이게 없으면 1만 계속 더해짐
+		}while(i<=num); //입력한 값보다 작거나 같아질 경우까지 반복
 		
 		System.out.println("합계 : " + sum);
 		

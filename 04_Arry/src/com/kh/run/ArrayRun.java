@@ -9,7 +9,7 @@ public class ArrayRun {
 		// TODO Auto-generated method stub
 
 		A_Array a = new A_Array();
-		a.method1();
+		//a.method1();
 		//a.method2();
 		//a.method3();
 		//a.method4();

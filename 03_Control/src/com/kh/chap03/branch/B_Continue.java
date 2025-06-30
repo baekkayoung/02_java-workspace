@@ -13,7 +13,7 @@ public class B_Continue {
 		// 1 3 5 7 9
 
 		/*
-		 * for(int i=1; i<11; i++) { //여기 만져서 홀수로 만드는거 지피티해보기 if(i % 2 == 1) {
+		 * for(int i=1; i<11; i++) { if(i % 2 == 1) {
 		 * System.out.println((i+" ")); } } }
 		 */
 		for (int i = 1; i < 11; i++) {
