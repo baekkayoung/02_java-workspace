@@ -111,7 +111,7 @@ public class AbstractionRun {
 		System.out.printf("%s님의 나이는 %d살이고, 키는 %.1fcm입니다" , baek.name, baek.age, baek.height);
 		
 		/*
-		 * 필드를 public 접근 제한차로 작성
+		 * 필드를 public 접근 제한자로 작성
 		 * => 필드에 직접적으로 접근해서 값 대입하거나 값을 가져올 수 있음!
 		 * => 외부에서 함부로 값을 변질시키거나 조회권한이 없는 사람이 가져올 수 있는 문제가 발생!!
 		 * >>> 캡슐화 작업하기! 안에가 안 보이게 작업

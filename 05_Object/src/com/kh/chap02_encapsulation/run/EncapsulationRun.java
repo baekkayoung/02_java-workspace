@@ -32,7 +32,7 @@ public class EncapsulationRun {
 		cha.setName("차은우"); // 차은우 = 인수 받아주는 매개변수 있어야
 		cha.setAge(20);
 		cha.setHeight(187.5);
-		cha.setKorSocer(100); //"백점" 못 옴
+		cha.setKorSocer(100); // 문자열 "백점" 못 옴
 		cha.setmathSocer(90);
 		
 		System.out.println(cha.getNmae());
