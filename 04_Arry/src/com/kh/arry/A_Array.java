@@ -74,14 +74,19 @@ public class A_Array {
 	}
 
 	public void method3() {
-		int[] iArr = new int[3]; //0번 ~ 2번 . 힙에 생겨야 하니까 new
-		double[] dArr = new double[4]; // 0번 ~ 3번 인덱스
+		int[] iArr = new int[3]; //0번 ~ 2번 . 힙에 생겨야 하니까 new 
+		double[] dArr = new double[4]; // 0번 ~ 3번 인덱스 
 		
 		for(int i=0; i<4; i++) { // 초기화가 0으로. 담겨있음 heap 영역의 특성
 			System.out.println(dArr[i]); // i - 0 0 0 , d - 0.0 0.0 0.0
 			
-		}
+			/* 헷갈리는 거 조심 ! 인덱스의 크기만 정했지 인덱스의 배열속 값들은 정한 적 없음. 
+			 * heap이라는 공간에는 절대 빈 공간으로 둘 수 없기 때문에 0이 들어가 있는 상태라
+			 * dArr[i]로 특정 인덱스를 출력해도 0.0이 뜨는 것임
+			 */
 		
+			
+		}
 		// 내가 각 인덱스에 초기화(값을 주는)하지 않아도 값들이 담겨있음! 왜?
 		// Heap이라는 공간에는 절대 빈 공간이 존재할 수 없음!
 		// 따라서 공간이 만들어질때 JVM이 기본적으로 초기화를 진행
@@ -186,7 +191,7 @@ public class A_Array {
 		
 		for(int i=0; i<arr.length; i++) {
 			System.out.print("좋아하는 과일 입력 : ");
-			arr[i] = sc.nextLine(); // ?
+			arr[i] = sc.nextLine(); // 배열의 n번째
 		}
 		
 		//arr[1]: 바나나
@@ -203,6 +208,9 @@ public class A_Array {
 
 		// 2. 쪼개서 캐릭터 배열에 넣기
 		char[] arr = new char[str.length()];
+		
+		System.out.println("찾고자 하는 문자 : ");
+		char ch = sc.nextLine().charAt(0);
 
 		// 3. 반복문을 활용해서 값대입
 
@@ -216,9 +224,54 @@ public class A_Array {
 		
 		//4.출력
 		//arr[i] : k
+		
+		int count = 0;
+		
+		
 		for (int i=0; i<arr.length; i++) {
 			System.out.println("arr["+ i + "]:" + arr[i]);
+			
+			if(arr[i] == ch ) {
+				count++;
+			}
 
 	}
+		System.out.println("찾은 문자 개수 : " + count);
 	}
+	
+	public void method11() {
+		
+		// 1. 사용자에게 배열의 길이 입력 받은 후 해당 해당 크기만큼의 정수배열 만듦
+		System.out.print("배열의 길이 입력 : ");
+		int size = sc.nextInt();
+		
+		int[] arr = new int[size]; //size대신 sc.nextInt를 해도 됨
+		
+		
+		// 2. 반복문 활용해서 0부터 마지막 인덱스까지 매번 1~100사이의 랜덤값 발생시켜 대입
+		for(int i=0; i<arr.length; i++) {
+			arr[i] = (int)(Math.random()*100+1);
+		}
+		
+		// 3. 반복문 출력 + 해당 그 인덱스에 담긴 값이 짝수인 값들의 총합 출력
+		int sum = 0;
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.println(arr[i]);
+			if(arr[i]%2==0) {
+				sum += arr[i]; // i만 적으면 0 1 2.. 인덱스를 더하는 게 아니라 배열의 값을 더하라는 거니까
+			}
+		}
+		
+		System.out.println("해당 배열의 짝수의 합 : " + sum);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
