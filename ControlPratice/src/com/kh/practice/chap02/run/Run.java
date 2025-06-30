@@ -1,6 +1,6 @@
-package com.kh.chap02.run;
+package com.kh.practice.chap02.run;
 
-import com.kh.chap02.loop.LoopPractice;
+import com.kh.practice.chap02.loop.LoopPractice;
 
 public class Run {
 
@@ -15,7 +15,7 @@ public class Run {
 		//a.practice9();
 		//a.practice11();
 		//a.practice13();
-		a.practice14();
+		//a.practice14();
 
 	}
 

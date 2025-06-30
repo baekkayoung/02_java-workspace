@@ -1,6 +1,6 @@
 package com.kh.practice.run;
 
-import com.kh.practice.fun.OperatorPractice;
+import com.kh.practice.func.OperatorPractice;
 
 public class Run {
 
@@ -13,7 +13,7 @@ public class Run {
 		//a.practice5();
 		//a.practice6()
 		//a.practice7();
-		a.practice8();
+		//a.practice8();
 		//a.practice9();
 		//a.practice10();
 		//a.practice11();

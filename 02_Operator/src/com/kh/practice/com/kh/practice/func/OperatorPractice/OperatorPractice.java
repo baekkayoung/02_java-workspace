@@ -1,4 +1,4 @@
-package com.kh.practice.fun;
+package com.kh.practice.func;
 
 import java.util.Scanner;
 
