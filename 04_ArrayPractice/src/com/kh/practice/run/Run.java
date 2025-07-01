@@ -9,7 +9,7 @@ public class Run {
 
 		ArrayPractice a = new ArrayPractice();
 		//a.practice1();
-		a.practice2();
+		//a.practice2();
 				
 	}
 

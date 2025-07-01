@@ -28,13 +28,13 @@ public class Student {
 	public void setName(String Name) {  //매개변수에 차은우 이름이 박힘// 관례적 표현
 		
 		// 필드.name = 매개변수name 원함
+		// 필드부네임 = 매개변수name?
 		// this에는 객체의 주소값이 들어가 있음 똑같은 애들 있어서 this
 		this.name = Name;
 		
 	}
 	
 	public void setAge(int age) {
-		
 	//this 붙이면 필드부 age 가르킴
 		this.age = age;
 	}
@@ -57,7 +57,7 @@ public class Student {
 	// 해당 필드에 담긴 값을 반환해주는 역할 수행
 	
 	// 뱉어내는 자료형. 리턴이 하나라도 있다면.
-	public String getNmae() {
+	public String getName() {
 		return name;
 	}
 	

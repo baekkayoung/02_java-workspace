@@ -29,8 +29,7 @@ public class Student { // 학생을 추상화해서 만든 클래스 => 캡슐�
 	
 	public String name;   //이름 
 	public int age;       //나이
-	public double height; //키     필드부 //
-	
+	public double height; //키    
 	
 	
 }

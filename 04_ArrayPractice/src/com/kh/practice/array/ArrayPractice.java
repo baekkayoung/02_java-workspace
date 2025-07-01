@@ -15,15 +15,6 @@ public class ArrayPractice {
 		System.out.print(arr[i] + " ");
 		}
 	}
-	
-	public void practice2(){
-		
 
-		int[] arr = new int[10];
-		
-		for(int i=9; i<=1; i--) { // 10 9 8 7 6 5 4 3 2 1 
-			arr[i] += i; 
-		System.out.print(arr[i] + " ");
-		}
-	}
+
 }

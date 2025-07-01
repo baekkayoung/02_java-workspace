@@ -29,13 +29,15 @@ public class EncapsulationRun {
 		System.out.println(cha.korScore);
 		*/
 		
-		cha.setName("차은우"); // 차은우 = 인수 받아주는 매개변수 있어야
+		// setter 메소드
+		cha.setName("차은우"); // 차은우 = 인수. 받아주는 매개변수 있어야
 		cha.setAge(20);
 		cha.setHeight(187.5);
 		cha.setKorSocer(100); // 문자열 "백점" 못 옴
 		cha.setmathSocer(90);
 		
-		System.out.println(cha.getNmae());
+		// getter 메소드
+		System.out.println(cha.getName());
 		System.out.println(cha.getAge());
 		System.out.println(cha.getHeight());
 		System.out.println(cha.getKorScore());
