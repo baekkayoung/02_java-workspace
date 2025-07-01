@@ -1,4 +1,4 @@
-package com.kh.practice.chap02.run;
+package com.kh.practice.chap02.Run;
 
 import com.kh.practice.chap02.loop.LoopPractice;
 

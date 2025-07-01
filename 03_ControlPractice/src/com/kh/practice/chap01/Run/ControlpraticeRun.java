@@ -1,4 +1,4 @@
-package com.kh.chap01.Run;
+package com.kh.practice.chap01.Run;
 
 import com.kh.practice.chap01.Control.ControlPractice;
 
