@@ -9,13 +9,17 @@ public class Phone {
 	private String series;
 
 	//생성자
-	public Phone() {}
+	public Phone() {} // 기본
+	
+	
 	public Phone(String name, String brand, int price, String series){
 		this.name= name;
 		this.price= price;
 		this.brand= brand;
 		this.series= series;
-	}
+	} // 매개변수 생성자
+	
+	
 	
 	public String getName() {
 		return name;

@@ -1,5 +1,7 @@
 package com.kh.chap02_objectArray.run;
 
+import java.util.Scanner;
+
 import com.kh.chap02_objectArray.model.vo.Phone;
 
 public class ObjectArrayRun {
@@ -28,8 +30,26 @@ public class ObjectArrayRun {
 		
 		phones[1] = new Phone("아이폰", "애플", 1400000, "16Pro");
 		phones[2] = new Phone("갤럭시", "삼성", 1200000, "s25");
+		
+		// 총가격과 평균 가격을 구해보자
+		int total = 0;//총가격을 저장할 int
 		for(int i=0; i<phones.length; i++) {
+			total += phones[i].getPrice(); //i 인덱스를 구하고 싶은 게 아니니까
 			System.out.println(phones[i].information()); // 0 1 2 
+		}
+		System.out.println("총가격:" + total + "원") ;
+		System.out.println("평균값:" + total/ phones.length +"원");
+		
+		// 사용자에게 구매하고자 하는 핸드폰명을 입력
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("구매하고자하는 핸드폰 : ");
+		String buy = sc.nextLine();
+		
+		for(int i =0 ; i<phones.length;i++) {
+			if(phones[i].getName().equals(buy)) {
+				System.out.print("당신이 구매하고자하는 휴대폰의 가격은" + phones[i].getPrice() +"원 입니다.");
+			}
 		}
 		
 		
