@@ -24,10 +24,7 @@ public class Desktop {
 	
 	
 	// 세터
-	
-	public Desktop(String string, String string2, String string3, int i) {
-		// TODO Auto-generated constructor stub
-	}
+
 
 
 

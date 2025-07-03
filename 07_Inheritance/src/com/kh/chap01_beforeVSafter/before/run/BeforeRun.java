@@ -11,7 +11,7 @@ public class BeforeRun {
 
 		//데스크탑 객체 생성
 		
-		Desktop d = new Desktop("삼성", "d-01", "짱짱데스트탑", 2000000);
+		Desktop d = new Desktop("삼성", "d-01", "짱짱데스트탑", 2000000, false);
 		
 		//티비 객체 생성
 		
