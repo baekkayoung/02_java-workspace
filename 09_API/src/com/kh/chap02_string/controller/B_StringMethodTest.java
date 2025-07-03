@@ -70,6 +70,28 @@ public class B_StringMethodTest {
 		
 		String str5 = str1.toUpperCase();
 		System.out.println(str5);
+		/*
+		System.out.println("계속 하시겠습니까?  (y/n) :  " );
+		char ch = sc.nextLine().charAt(0);
+		if(ch == 'y' || ch == 'Y') {
+		}
+		char ch = sc.nextLine().toUpperCase().charAt(0);
+		char ch = sc.nextLine().charAt(0).toUpperCase() -> 캐릭터형에다가 투어퍼? ㄴㄴ
+		 */
+		
+		// 9.문자열.trim() : 공백을 제거
+		//	 문자열의 앞 뒤 공백을 제거시킨 새로운 String 문자열 반환
+		String str6 = "      Ja      Va      ";
+		System.out.println(str6.trim()); // 중간 공백은 제거 못 함
+		
+		// 10.문자열.toCharArray() : char[] k i w i 
+		char[] arr = str1.toCharArray();
+		System.out.println(arr[3]);
+		
+		// 11.String.valueOf(char[] data) : String = 배열을가지고 하나의 문자열로 . 11번과 반대 메소드
+		System.out.println(String.valueOf(arr));
+		
+		
 
 		
 		
