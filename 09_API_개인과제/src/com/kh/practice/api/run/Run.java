@@ -56,6 +56,8 @@ public class Run {
 		
 		// searchBook(searchTitle) 메소드 호출
 		bc.searchBook(searchTitle);
+		
+		System.out.println("백가영");
 
 	}
 
