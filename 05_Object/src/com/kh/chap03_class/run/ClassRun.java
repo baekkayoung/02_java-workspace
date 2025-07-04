@@ -67,8 +67,4 @@ public class ClassRun {
 		System.out.println(p2.information());
 		
 	}
-	
-	
-		
-
 }

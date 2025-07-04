@@ -29,7 +29,7 @@ public class User {
 		//기본생성자 (매개변수가 없는 생성자)
 		System.out.println("이거 진짜 되나?");
 	}
-	// 매개변수 생성자   를 안만들었을떄는 기본을 만들어줌 근데 매개를 만들면 기본을 안만들어줌
+	// 매개변수 생성자   를 안만들었을때는 기본을 만들어줌 근데 매개를 만들면 기본을 안만들어줌
 	public User(String userId, String userPwd, String userName) {
 		this.userId = userId;
 		this.userPwd = userPwd;

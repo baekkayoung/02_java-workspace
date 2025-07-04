@@ -26,7 +26,7 @@ public class FieldTest1 {
 	// 전역변수(필드)
 	private int global; // 어디서든 글로벌 쓸 수 있음.
 	//필드
-						
+	
 						//매개변수
 	public void test1(int num) {
 		// 매개변수 => 지역변수
