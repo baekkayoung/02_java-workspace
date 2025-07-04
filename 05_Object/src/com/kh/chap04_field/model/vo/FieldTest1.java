@@ -16,7 +16,7 @@ package com.kh.chap04_field.model.vo;
  *
  * 
  * 2. 지역변수
- * 생성시점 : 지역변수가 속해있는 특정한 구역({}) 실행시 메몰 영역에 할당. 메소드 호출시.
+ * 생성시점 : 지역변수가 속해있는 특정한 구역({}) 실행시 메모리 영역에 할당. 메소드 호출시.
  * 소멸시점 : 특정한 구역 종료시 소멸 
  */
 
@@ -35,9 +35,8 @@ public class FieldTest1 {
 		//전역변수 출력 = > 객체 생성시 jvm이 초기값으로라도 초기화
 		System.out.println(global);
 		
-		//매개변수 => 이 메소드 호출시 반드시 값이 전달 될거라 문제 x
+		//매개변수 => 이 메소드 호출시 반드시 인수값이 전달 될거라 문제 x
 		System.out.println(num);
-		
 		
 		//System.out.println(local); 초기화 안되어있음 오류가 남
 	}

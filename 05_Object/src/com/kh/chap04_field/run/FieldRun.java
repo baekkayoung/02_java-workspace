@@ -17,7 +17,7 @@ public class FieldRun {
 		System.out.println(f2.pub);
 		
 		//protected
-		//System.out.println(f2.pro..);
+		//System.out.println(f2.protected);
 		
 		//System.out.println(f2.default);
 		

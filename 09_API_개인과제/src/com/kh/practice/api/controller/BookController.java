@@ -123,7 +123,6 @@ public class BookController {
 //				System.out.println(b[i]);
 //			}
 //		}
-	
 		
 	// 2) for each문 방법 (향상된 for문)
 		for(Book book : b) { // book=b[0] => book=b[1] => book=b[2]
