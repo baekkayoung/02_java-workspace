@@ -20,11 +20,11 @@ public class BookController {
 	// 각각의 인덱스에 접근하여 샘플 데이터 넣어서 객체 생성
 	
 	{	
-	b[0] = new Book("자바의 정석" , "차은우", "나무", new Date(2023-1900, 7-1, 14) , 10000);
-    b[1] = new Book("여러분 파이팅", "주지훈", "사과", new Date(2025-1900, 6-1, 11), 20000);
-    b[2] = new Book("API의 모든 것" , "문동은", "오렌지", new Date(2025-1900, 5-1, 25), 35000);
-    b[3] = new Book("언어의 천재", "장원영", "키위", new Date(2025-1900, 2-1, 1), 70000);
-    b[4] = new Book("개발왕국", "시연쌤", "바나나", new Date(2025-1900, 13-1, 2), 80000);
+		b[0] = new Book("자바의 정석" , "차은우", "나무", new Date(2023-1900, 7-1, 14) , 10000);
+	    b[1] = new Book("여러분 파이팅", "주지훈", "사과", new Date(2025-1900, 6-1, 11), 20000);
+	    b[2] = new Book("API의 모든 것" , "문동은", "오렌지", new Date(2025-1900, 5-1, 25), 35000);
+	    b[3] = new Book("언어의 천재", "장원영", "키위", new Date(2025-1900, 2-1, 1), 70000);
+	    b[4] = new Book("개발왕국", "시연쌤", "바나나", new Date(2025-1900, 13-1, 2), 80000);
 	}
 
 	// 1. 도서 전체 출력 기능 메소드
@@ -61,43 +61,45 @@ public class BookController {
 	
 	// '-'를 구분자로 StringTokenizer를 이용하여 문자열 분리 후 각각 년,월,일 을 Date에 적용
 		
-		
-	// 1) StringTokenizer를 이용한 방법
-	// 1_1) StringTokenizer를 이용하여 먼저 "2020-07-01" 을 각각 문자열로분리("2020", "07", "01")
-	StringTokenizer stn = new StringTokenizer(newDate, "-");
-
-	// 1_2) 각 분리된 문자열들을 매번 뽑아서 int 변수들에 담기
-	
-	//System.out.println(stn.nextToken()); // year
-	int year = Integer.parseInt(stn.nextToken());
-
-	//System.out.println(stn.nextToken()); // month
-	int month = Integer.parseInt(stn.nextToken());
-			
-	//System.out.println(stn.nextToken()); // date
-	int date = Integer.parseInt(stn.nextToken());
-	
-	// 1_3) year, month, date 가지고 Date객체 생성하기
-	Date d1 =new Date(year-1900, month-1,date);
+//		
+//	// 1) StringTokenizer를 이용한 방법
+//	// 1_1) StringTokenizer를 이용하여 먼저 "2020-07-01" 을 각각 문자열로분리("2020", "07", "01")
+//	StringTokenizer stn = new StringTokenizer(newDate, "-");
+//
+//	// 1_2) 각 분리된 문자열들을 매번 뽑아서 int 변수들에 담기
+//	
+//	//System.out.println(stn.nextToken()); // year
+//	int year = Integer.parseInt(stn.nextToken());
+//
+//	//System.out.println(stn.nextToken()); // month
+//	int month = Integer.parseInt(stn.nextToken());
+//			
+//	//System.out.println(stn.nextToken()); // date
+//	int date = Integer.parseInt(stn.nextToken());
+//	
+//	// 1_3) year, month, date 가지고 Date객체 생성하기
+//	Date d1 =new Date(year-1900, month-1,date);
 //	SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
 //	String pr =sdf.format(d1);
 //	System.out.println(pr);
-	
-	
+//	
+//	
 
 			
 
 		
-			// 2) split 메소드를 이용한 방법
-			// 2_1) split 메소드를 이용하여 먼저 "2020-07-01" 을 각각 문자열로 분리후 String[] 배열에 담기
-		
-			// 2_2) 각 분리된 문자열들이 담겨있는 해당 배열에 인덱스에 접근해서int 변수들에 담기
-		
-			// 2_3) year, month, date 가지고 Date객체 생성하기
+	// 2) split 메소드를 이용한 방법
+	// 2_1) split 메소드를 이용하여 먼저 "2020-07-01" 을 각각 문자열로 분리후 String[] 배열에 담기
+	String[] str =newDate.split(",");
+	
+	// 2_2) 각 분리된 문자열들이 담겨있는 해당 배열에 인덱스에 접근해서int 변수들에 담기
+
+	// 2_3) year, month, date 가지고 Date객체 생성하기
 
 	// 3. 나머지 전달받은 값들과 위에서 변환작업을 해준 price와 date값을가지고
 	// Book클래스의 매개변수 생성자를 통해 생성
-	b[5] = new Book(newTitle, newAuthor, newPublisher, d1, price);
+		
+		b[5] = new Book(newTitle, newAuthor, newPublisher, d1, price);
 	}
 	
 	
@@ -116,17 +118,49 @@ public class BookController {
 
 	// 1) for loop문 방법
 	
-		for (int i = 0; i < b.length; i++) {
-			if (b[i] != null && b[i].getTitle().contains(searchTitle)) {
-				System.out.println(b[i]);
-			}
-		}
+//		for (int i = 0; i < b.length; i++) {
+//			if (b[i] != null && b[i].getTitle().contains(searchTitle)) {
+//				System.out.println(b[i]);
+//			}
+//		}
 	
 		
 	// 2) for each문 방법 (향상된 for문)
+		for(Book book : b) { // book=b[0] => book=b[1] => book=b[2]
+			if(book != null && book.getTitle().contains(searchTitle)) {
+				System.out.println(book);
+			}
+		}
+		
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 	
