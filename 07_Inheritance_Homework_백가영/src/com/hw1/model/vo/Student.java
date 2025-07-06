@@ -8,7 +8,7 @@ public class Student extends Person {
 	public Student() {}
 	
 	public Student(String name, int age, double height, double weight, int grade, String major) {
-		super(name,age, height, weight);
+		super(age, height, weight);
 		this.grade=grade;
 		this.major=major;
 	}
