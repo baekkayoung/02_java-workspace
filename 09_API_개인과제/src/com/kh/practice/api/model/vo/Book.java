@@ -77,7 +77,7 @@ public class Book {
 	// 포맷을 지정한 SimpleDateFormat 객체 생성
 	// publishDate (Date타입) --- 포맷적용한 ---> str (String)
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
-	String str = sdf.format(publishDate);
+	String str = sdf.format(publishDate); // str이라는 변수에 담기
 	return "Book  " + "[title = " + title + ", author = " + author + ", publisher = " + publisher + ", publishDate = " + str + ", price = " + price + "]";        
 	}
 
