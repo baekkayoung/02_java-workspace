@@ -21,16 +21,20 @@ public class GenericListRun {
 		list.add(1, new Music("popo","백예린"));
 		System.out.println(list);
 		
-		List<Music> sub = list.subList(0, 2); // 반환도 Music generic 반환
+		List<Music> sub = list.subList(0, 2); // 반환도 Music generic 붙여서 반환
 		
 		list.addAll(sub);
 		System.out.println(list);
 		
+		/*	원래 이랬는데..
+		 * 	Music m = (Music)list.get(0);  
+			String s = (String)list.get(3); 
+		 */
 		Music m = list.get(0); // 강제 형변환 안 해도 됨 
 		System.out.println(m);
 		System.out.println(list.get(1).getArtist());
 		
-		for(Music ms :list) {
+		for(Music ms :list) { // Object 안 해도 됨! 뮤직으로 제너릭 해서 ㅎㅎ
 			System.out.println(ms);
 		}
 		

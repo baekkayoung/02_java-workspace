@@ -7,7 +7,9 @@ import com.kh.chap01_list.part02_MVC.model.vo.Music;
 // 사용자의 요청을 처리해주는 클래스. 그래서 출력문, 스캐너 안 나옴
 public class MusicController {
 		
-	private ArrayList<Music> list = new ArrayList<Music>(); // [] , list는 전역변수! 조회하기 위해서
+	private ArrayList<Music> list = new ArrayList<Music>(); 
+	// [] , list는 전역변수! 조회하기 위해서
+	// Music 타입 객체들만 저장할 수 있는 리스트 만들기
 	
 	// 초기화 블럭
 	{
@@ -23,21 +25,22 @@ public class MusicController {
 	}
 	
 	public ArrayList<Music> selectMusic() { // 반환형 void 말고 ArrayList<Music> 
-		return list; // 전체곡 리턴
+		return list; // 컨트롤러의 멤버 변수인 list.
+		//MusicController가 내부에서 관리하고 있는 Music 객체들의 리스트를 return
 	}
 	
 	public int deleteMusic(String title) { // 얘 왜 int? result값이 반환되는데 result의 자료형이 int라서
 		int result = 0; // 삭제가 되면 1 
 		for(int i = 0; i<list.size(); i++) { // 0번부터 마지막 요소까지 도는데
-			
 			if(list.get(i).getTitle().equals(title)) { // 음악 i번 인덱스의 제목이랑 입력받은 타이틀이 같으면
 				list.remove(i); // 삭제
-				result = 1;
+				result = 1; // 삭제되면 result 값이 1 증가
 				break; // 삭제했으면 반복문 빠져나오기
 			}
 		}
 		//result == 0(삭제할 곡을 못 찾음) | 1(성공적으로 삭제함)
 		return result; // return 할거니까 void 없앰. 맨처음에는 void로 해놓고 나중에 삭제해도 됨
+		//mc.deleteMusic(title) 메서드를 호출한 곳으로 되돌아감
 	}
 	
 	public ArrayList<Music> searchMusic(String keyword) { // 오버로딩

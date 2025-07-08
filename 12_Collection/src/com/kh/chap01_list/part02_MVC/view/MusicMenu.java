@@ -15,6 +15,8 @@ import com.kh.chap01_list.part02_MVC.model.vo.Music;
 
 public class MusicMenu { // 화면을 담당하는 클래스
 	
+	//View : 화면을 담당하는 역할 즉, 사용자에게 보여지는 시각적인 요소(출력문 코드(print문), 입력문(Scanner문))
+	
 	
 	// 스캐너
 	private Scanner sc = new Scanner(System.in); // 전역변수 . 필드라서 private
@@ -37,7 +39,7 @@ public class MusicMenu { // 화면을 담당하는 클래스
 			int menu =0;
 			
 			try { // try에서 문제가 있으면 catch에서 문제를 다룸
-				menu = sc.nextInt();
+				menu = sc.nextInt(); //InputMismatchException: 자바에 기본적으로 있는 예외 클래스.
 			}catch(InputMismatchException e) { // 만약 try 블록 안에서 InputMismatchException이 발생하면
 				System.out.println("숫자를 입력해주세요"); // 이 코드를 실행
 			}
@@ -96,7 +98,8 @@ public class MusicMenu { // 화면을 담당하는 클래스
 		
 		System.out.println("\n=== 전체곡 리스트 ===");
 		
-		ArrayList<Music> list = mc.selectMusic();
+		ArrayList<Music> list = mc.selectMusic(); // mc의 리스트를 받아서 사용
+		// mc의 list 객체(컨트롤러내)를 가리키는 주소를 list(뮤직메뉴) 변수에 저장함
 		
 		if(list.isEmpty()) {// 만약 리스트가 비어있을 경우
 			System.out.println("현재 존재하는 곡이 없습니다.");
@@ -121,7 +124,7 @@ public class MusicMenu { // 화면을 담당하는 클래스
 		System.out.println("삭제하고자 하는 곡명 : ");
 		String title = sc.nextLine();
 		
-		int result = mc.deleteMusic(title);
+		int result = mc.deleteMusic(title); // int 타입의 값을 반환
 		
 		if(result == 1 ) {
 			System.out.println("성공적으로 삭제했습니다");
