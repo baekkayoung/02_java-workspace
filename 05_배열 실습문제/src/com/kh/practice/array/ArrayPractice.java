@@ -160,7 +160,7 @@ public class ArrayPractice {
         }
         System.out.println();
 
-<<<<<<< HEAD
+
 	}
 	
 	public void practice9(){
@@ -187,29 +187,8 @@ public class ArrayPractice {
         }
 	}
 	
-=======
-	}
-	
-	public void practice9() {
-		String[] chks = { "후라이드", "간장", "양념", "청양마요" };
-		
-		System.out.println("치킨 이름을 입력하세요");
-		String pick = sc.nextLine();
-		
-		boolean found = false; // 아무것도 찾은 게 아직 없으니까 false로 초기화
-		
-		for(int i = 0 ; i < chks.length; i++) {
-			if(pick.equals(chks[i])){
-				found = true; // 일치했을때의 true 값을 found에 저장, 찾았다면 break
-				break;
-			}
-		}
-		if(found) {
-			System.out.println(pick + "치킨 배달 가능");
-		} else {
-			System.out.println(pick + "치킨은 없는 메뉴입니다.");
-		}
-	}
+
+
 	
 	public void practice10(){
 		
@@ -426,10 +405,6 @@ public class ArrayPractice {
 	
 	
 	
-	
-	
-	
->>>>>>> 93fd824c7af602fb724de4ced301f407e1aaa740
-	
+
 	
 }

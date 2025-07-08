@@ -74,7 +74,7 @@ public class Student {
 	@Override
 	public int hashCode() { //Object. 모든 필드에 담긴 값이 일치하면 동일한 hashCode를 반환하도록 하는 게 목적인 hashCode() 생성
 		String str = name + age + score; // "공유43100 ", "박보검3020", "공유 43100"
-		return str.hashCode(); 문자열을 가지고 주소값을 만들기 때문에 같음
+		return str.hashCode();  문자열을 가지고 주소값을 만들기 때문에 같음
 	}
 	
 	@Override

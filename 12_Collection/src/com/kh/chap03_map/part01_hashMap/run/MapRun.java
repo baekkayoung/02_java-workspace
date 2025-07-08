@@ -60,15 +60,17 @@ public class MapRun {
 		// 1. keySet() 이용하는 방법
 		
 		// 1) hm에 있는 key들만 뽑아서 Set에 담기(키들의 집합 형태)
-		Set keyset = hm.keySet(); // keyset() : key값만 뽑아서 set 안에 다 넣음
-		// 2) 1번 과정에서 작업한 keyset을 Iterator에 담기
+		Set keyset = hm.keySet(); // keyset() : hm의 모든 key값만 뽑아서 set 안에 다 넣음
+		
+		// 2) 1번 과정에서 작업한 keyset을 하나씩 뽑아서 Iterator에 담기
 		Iterator itKey = keyset.iterator();
+		
 		// 3) 반복문 통해서 뽑기
-		while(itKey.hasNext()){
-			String key = (String)itKey.next();
-			Snack value = (Snack)hm.get(key);
+		while(itKey.hasNext()){ //itKey값이 있는 동안
+			String key = (String)itKey.next(); // itKey의 키값을 key에 저장
+			Snack value = (Snack)hm.get(key); // value 값을 value에 저장
 			System.out.println(key + "=" + value);
-			
+			// key만 뽑으려면 keyset , value를 뽑으려면 get(key)
 			
 		}
 		

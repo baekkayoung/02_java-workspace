@@ -33,9 +33,8 @@ public class SetRun {
 		// 5개의 데이터를 넣었는데 3개만 저장되어있음.
 		// 해쉬셋 : 저장 순서 유지 안됨 (인덱스 개념 없음)
 		// 중복된 데이터(동일객체)는 보관 불가 <-> List는 중복값 허용
-		// String은 주소값은 다르지만 ""안의 알맹이를 비교! 주소값은 다르지만 
+		// String은 주소값은 다르지만 ""안의 알맹이를 비교! 
 		// String은 이미 오버라이딩 되어있어서 같은 객체라고 생각
-		// Object에 있는 hashcode - > 주소값을 가지고 비교
 		
 		
 		HashSet<Student> hs2 = new HashSet<Student>();
@@ -52,7 +51,7 @@ public class SetRun {
 		// 동일 객체로 판단 = > 중복으로 안 뜸
 		
 		// HashSet 이라는 공간에 객체가 추가될 때마다 동일 객체인지 비교!
-		// 동일객체: 각 객체마다 hashCode() 호출 결과가 일치하고, equals() 비교시 true일 경우에만 동일 객체라고 판단 => 2개로 판단
+		// 동일객체: 각 객체마다 hashCode() 호출 결과가 일치하고, equals() 비교시 true일 경우에만 동일 객체라고 판단 => 2개 판단
 		
 		// 공유가 2명 출력됨 -> 중복이 제거되지 않음
 		// 이유: HashSet은 객체를 추가할 때, hashCode()와 equals()를 통해 동일 객체인지 판단
@@ -81,7 +80,7 @@ public class SetRun {
 		ArrayList<Student> list = new ArrayList<Student>(); // []
 		list.addAll(hs2); //뒤에 컬렉션이 올 수 있음
 		
-		ArrayList<Student> list2= new ArrayList<Student>(hs2);
+		ArrayList<Student> list2= new ArrayList<Student>(hs2); // hs2의 모든 요소가 list2에 저장
 		for(int i= 0 ; i<list2.size(); i++) {
 			System.out.println(list2.get(i));
 		}
@@ -89,10 +88,10 @@ public class SetRun {
 		
 		System.out.println("=========================================");
 		
-		// 3. Iterator 반복자를 이용해서 순차적으로 접근
-		Iterator<Student> it = hs2.iterator(); // it에 넣어놓고 하나씩 빼는..
-		while(it.hasNext()) {
-			Student s = it.next();
+		// 3. Iterator 반복자를 이용해서 순차적으로 접근..
+		Iterator<Student> it = hs2.iterator(); // it에 hs2. 요소 넣어놓고 하나씩 빼는..
+		while(it.hasNext()) { // 꺼낼 요소가 있는지 판단
+			Student s = it.next(); //다음 요소를 꺼내서 s 에 저장
 			System.out.println(s);
 		}
 		

@@ -10,7 +10,7 @@ public class PropertiesRun1 {
 
 	public static void main(String[] args) {
 		
-		// Properties : Map 계열의 컬렉션 => 키 + 베류 세트로 저장
+		// Properties : Map 계열의 컬렉션 => 키 + 벨류 세트로 저장
 		// HashMap과의 차이점 : Properties는 키값도 String, 벨류값도 String
 		
 		Properties prop = new Properties(); // 데이터를 담을 수 있는 공간.
