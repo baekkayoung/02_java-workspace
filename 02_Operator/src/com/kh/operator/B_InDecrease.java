@@ -31,7 +31,7 @@ public class B_InDecrease {
 		System.out.println("후위연산 적용전 num2의 값 : " + num2);
 		System.out.println("1회 수행 :" + num2++); // 10 출력 후 => num2가 11로 증가 (보이는 건 10이지만)
 		System.out.println("2회 수행 :" + num2++); // 11 출력 후 => num2가 12로 증가 (보이는 건 11이지만)
-		System.out.println("2회 수행 :" + num2++); // 12 출력 후 => num2가 13로 증가 (보이는 건 11이지만)
+		System.out.println("3회 수행 :" + num2++); // 12 출력 후 => num2가 13로 증가 (보이는 건 11이지만)
 		System.out.println("최종 num2의 값: " + num2); // 13
 		
 		}

@@ -1,6 +1,7 @@
 package com.kh.chap01_list.part02_MVC.model.vo;
 
 public class Music {
+	
 	private String title;
 	private String artist;
 	
