@@ -31,7 +31,10 @@ public class A_For {
 	
 	public void method1() {
 		
-		for(int i=1; i <=20; i++) {
+		for(int i=1; i <=20; i++) { //1 2 3 4 5 6 7 8 9 10
+									//11 12 13 14 15 16 17 18 19 
+			// 01  19 
+			
 			System.out.println("안녕하슈");
 			
 		}
@@ -233,7 +236,7 @@ public class A_For {
 					System.out.println("===" + dan + "단===");
 					
 					for(int i=1; i<10; i++) {
-						System.out.printf("%d x %d = %d\n", dan, i , dan*1);
+						System.out.printf("%d x %d = %d\n", dan, i , dan*i);
 					}
 		}
 		
@@ -260,14 +263,13 @@ public class A_For {
 			// 2단부터 9단까지 다 출력
 			for(int dan=2; dan<10; dan++) {
 				
-				for(int i=1 ; i<=10; i++) {
-					System.out.printf("%d + %d = %d\n" , dan, i, 2*dan);
+				for(int i=1 ; i<10; i++) {
+					System.out.printf("%d x %d = %d\n" , dan, i, dan * i);
 				}
 				System.out.println(); // 개행
 			}
 			
 		}
-		
 		
 	}
 	

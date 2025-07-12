@@ -13,7 +13,7 @@ public class LoopPractice {
 		
 		
 		
-		if(num>=0) {
+		if(num>0) {
 			for (int i=1; i<=num ; i++){
 				System.out.print(i +" ");
 			}
@@ -50,10 +50,8 @@ public class LoopPractice {
 			
 		    if (num >= 1) {
 		    	
-		    }
 		        for (int i = 1; i <= num; i++) {
 		            sum += i;
-
 		            if (i < num) {
 		                System.out.print(i + " + ");
 		            } else {
@@ -61,6 +59,7 @@ public class LoopPractice {
 		            }
 		        }
 		        System.out.println(sum);
+		    }
 		    
 	}
 	
@@ -111,7 +110,7 @@ public class LoopPractice {
 		for(int dan=num; dan<10; dan++) {
 			System.out.println("==== "+ dan +"단 ====");
 			for(int i=1 ; i<=10; i++) {
-				System.out.printf("%d + %d = %d\n" , dan, i, 2*dan);
+				System.out.printf("%d + %d = %d\n" , dan, i, dan * i);
 			}
 			System.out.println();
 	}
@@ -138,8 +137,8 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		
-		for (int j = 1; j <= num; j++) {
-		    for (int i = 1; i <= j; i++) {
+		for (int j = 1; j <= num; j++) { //j는 줄수(행) -> 총 num줄 생성
+		    for (int i = 1; i <= j; i++) { //i는 별수 -> 줄 번호만큼 출력
 		        System.out.print("*");
 		    }
 		    System.out.println();
@@ -152,8 +151,8 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		
-		for (int j=num; j>=1; j--) {
-		    for (int i = 1; i <= j; i++) {
+		for (int j=num; j>=1; j--) { // j는 줄수
+		    for (int i = 1; i <= j; i++) { // i는 별수 ->
 		        System.out.print("*");
 		    }
 		    System.out.println();
@@ -161,5 +160,16 @@ public class LoopPractice {
 	}
 	}
 	
+	public void practice15(){
+		System.out.println("정수 입력: ");
+		int num = sc.nextInt();
+		
+		for (int j = 1; j <= num; j++) {  // 줄수
+			for (int i = j; i <= num; i++) { // i가 j부터 시작. 줄이 늘어날 수록 별개수는 줄어들 수 밖에 없음.
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
 	
 }
