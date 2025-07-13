@@ -36,7 +36,7 @@ public class ArrayForEach {
 		
 		phones[1].setSeries("s25엣지"); // setter 메소드로 변경
 		
-		int total = 0 ; //?????????????????????????????????
+		int total = 0 ; 
 		for(Phone p: phones) { // p=phones[0] = > p=phones[1] > p=phones[2]
 			total += p.getPrice();
 			System.out.println(p.information());
@@ -47,7 +47,7 @@ public class ArrayForEach {
 		Scanner sc= new Scanner(System.in);
 		System.out.println("구매하고자하는 핸드폰 : ");
 		String buy = sc.nextLine();
-		for(Phone p : phones) { // p= phones[1~3] ?
+		for(Phone p : phones) { // p= phones[1~3]
 			
 			if(p.getName().equals(buy))
 			System.out.println("가격:" + p.getPrice());

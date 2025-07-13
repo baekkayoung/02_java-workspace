@@ -24,8 +24,8 @@ public class FieldRun {
 		//System.out.println(f2.pri);
 		
 		FieldTest3 f3 = new FieldTest3();
-			//System.out.println(f3.sta);
-			//System.out.println(FieldTest3.sta);
+			System.out.println(f3.sta);
+			System.out.println(FieldTest3.sta);
 		System.out.println(Math.PI);
 		System.out.println(FieldTest3.STA_FIN);
 
