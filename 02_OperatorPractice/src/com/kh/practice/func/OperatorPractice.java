@@ -120,6 +120,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice8(){
+
 		System.out.println("주민번호를 입력하세요(-포함) : ");
         String jumin = sc.nextLine();
 

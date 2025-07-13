@@ -136,6 +136,10 @@ public class A_if {
 				//나를 호출햇던 메소드5로 돌아가고 이후 코드가 없기때문에 긑남. 실행파일run쪽으로 감.
 				
 				//모르는거라고 알려주고 여기서 멈추게 하려고 return
+				
+				// method5()에서 return;을 만나면 더 이상 아래 코드는 실행되지 않고
+				
+				//다시 main()의 "main 메소드 계속 실행" 부분으로 이동합니다.
 			}
 			System.out.println(name + " 님은 " + result + "입니다.");
 			
