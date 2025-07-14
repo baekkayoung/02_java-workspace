@@ -260,7 +260,7 @@ Fail [점수 미달]
 		 if (att < 14) {
 		    System.out.println("====== 결과 ======");
 		    System.out.printf("Fail [출석 회수 부족 (%d/%d)]\n", att, totalLec);
-		        return;
+		        return; // 종료. 그 뒤의 코드들 실행 안 함
 		    }
 		
 		double midScore = (mid *0.2);

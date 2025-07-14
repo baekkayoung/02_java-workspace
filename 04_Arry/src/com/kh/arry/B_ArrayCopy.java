@@ -48,6 +48,7 @@ public class B_ArrayCopy {
 		}
 	}	//주소만 복사하는 것이므로 하나만 바뀌어도 같이 바뀜.
 	
+	
 	public void method2() {
 		// 1. for문 이용
 		int[] origin = {1,2,3,4,5}; //원본 배열
@@ -59,7 +60,7 @@ public class B_ArrayCopy {
 		 */
 		
 		for(int i=0; i<copy.length; i++) {
-			copy[i] = origin[i]; 
+			copy[i] = origin[i];  // 깊은 복사
 			//다른 주소값을 사용하면서 값만 같다.
 		}
 		
@@ -97,6 +98,7 @@ public class B_ArrayCopy {
 		
 	}
 	
+	
 	public void method3() {
 		// System이라는 클래스에서 제공하는 arraycopy() 메소드
 		int[] origin = {1,2,3};
@@ -108,17 +110,17 @@ public class B_ArrayCopy {
 		//System.arraycopy(origin, 1, copy, 3, 2);
 		
 		for(int i=0; i<copy.length; i++) {
-			System.out.print(copy[i] + " ");
+			System.out.print(copy[i] + " "); // 아직 값 안 줘서 0...
 		}
 		
 		System.out.println();
 		System.out.println("origin 주소값 : " + origin.hashCode());
 		System.out.println("copy 주소값 : " + copy.hashCode()); // 깊은 복사
-		//이거왜????????
 	}
 	
+	
 	public void method4() {
-		// 3. Arrays 클래스 제공하는 copyOf() 메소드 사용
+		// 3. Arrays 클래스 제공하는 copyOf() 메소드 사용 -> 얕은 복사
 		
 		int[] origin = {1,2,3,4,5};
 		// 복사본 배열 = Arrays.copyOf(원본배열명, 복사할길이);
@@ -146,9 +148,10 @@ public class B_ArrayCopy {
 	 * 
 	 */
 	
+	
 	public void method5() {
 		// 4. clone() 메소드 이용 **중요
-		// 완전 똑같이 복사할 때!
+		// 완전 똑같이 복사할 때! -> 얕은 복사
 		
 		int[] origin = {1,2,3,4,5};
 		// 복사본 배열 = 원본배열.clone();

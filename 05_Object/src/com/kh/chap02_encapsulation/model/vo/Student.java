@@ -48,7 +48,7 @@ public class Student {
 		
 	}	
 	
-	public void setmathSocer(int korScore) {
+	public void setmathSocer(int mathScore) {
 		this.mathScore = mathScore;
 	}
 	

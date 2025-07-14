@@ -26,21 +26,21 @@ public class StaticMethod {
 	
 	// 3. 매개 변수는 있고 반환값은 없는 메소드
 	public static void method3(String name) {
-		System.out.println("매개변수는 있꼬 반환값은 없는 메소드입니다.");
+		System.out.println("매개변수는 있고 반환값은 없는 메소드입니다.");
 		System.out.println(name + "님의 방문을 환영합니다");
 	
 	}
 	
 	// 4. 매개 변수도 있고 반환값 둘 다 있는 메소드
 	public static boolean method4(String str1, String str2) {
-		/*
+		
 		if (str1.equals(str2)) {
-			return true
+			return true;
 		}else {
 			return false;
-		}*/
+		}
 		
-		return str1.equals(str2);
+//		return str1.equals(str2);
 	}
 	
 }

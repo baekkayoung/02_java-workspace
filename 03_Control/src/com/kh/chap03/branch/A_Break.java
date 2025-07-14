@@ -23,10 +23,10 @@ public class A_Break {
 			if(random % 3 == 0) {
 				break;
 			}
-		}
+		} //예상 : 숫자가 하나씩 나오다가 3의 배수 숫자 나올때 한 번 출력하고 끝
 		
 	}
-	
+
 	public void method2() {
 		// 사용자가 문자열 입력하다가
 		// "exit"를 입력하면 끝내기

@@ -39,6 +39,17 @@ public class B_Continue {
 		}
 	}
 	
+	public void method3() {
+		for(int dan = 1; dan<10; dan++) {
+			if(dan%3==0) {
+				continue;
+			}
+			for(int i=1; i < 10; i++) {
+				System.out.printf("%d x %d = %d\n", dan, i, dan * i);
+			}
+		}
+		}
+			
 	
 	
 	
